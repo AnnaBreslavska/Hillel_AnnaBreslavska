@@ -1,3 +1,5 @@
+package Homework_2;
+
 public class HW_2 {
         public static void main(String[] args) {
             int AgeHusband = 34;
