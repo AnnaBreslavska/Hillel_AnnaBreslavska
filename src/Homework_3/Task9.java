@@ -13,15 +13,15 @@ public class Task9 {
         int wifeAge = scanner.nextInt();
         System.out.println(" Enter Husband's age:");
         int husbandAge=scanner.nextInt();
-        System.out.println(" Do you want to get a credit? (True/False) ");
-        boolean credit = scanner.nextBoolean();
-        if (credit){
-            if ( wifeAge<=35 & husbandAge<35){
+        if (wifeAge<=35){
+            if ( husbandAge<35){
                 System.out.println( "Credit is Approved.");
             }
             else
                 System.out.println( " Credit is not Approved.");
         }
+        else
+            System.out.println( " Credit is not Approved.");
         System.out.println( "BYE!");
     }
 }
