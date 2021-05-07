@@ -8,20 +8,20 @@ public class Task9 {
     //Написать программу, которая выводит в консоль результат.
     //Задачу решить используя вложенный if (сначала проверить возраст жены, потом мужа)
     public static void main(String[] args) {
-        System.out.println(" Enter Wife's age:");
         Scanner scanner = new Scanner(System.in);
+        System.out.println(" Enter Wife's age:");
         int wifeAge = scanner.nextInt();
         System.out.println(" Enter Husband's age:");
-        int husbandAge = scanner.nextInt();
-        boolean isWifeCreditApproved = true;
-        boolean isHusbandCreditApproved = true;
-        boolean TotalCredit;
-        if (TotalCredit = isWifeCreditApproved & isHusbandCreditApproved) {
-            if (TotalCredit = wifeAge <= 35 & husbandAge <= 35) {
-                System.out.println(" Credit is Approved. ");
+        int husbandAge=scanner.nextInt();
+        System.out.println(" Do you want to get a credit? (True/False) ");
+        boolean credit = scanner.nextBoolean();
+        if (credit){
+            if ( wifeAge<=35 & husbandAge<35){
+                System.out.println( "Credit is Approved.");
             }
             else
-                System.out.println(" Credit is not approved: ");
+                System.out.println( " Credit is not Approved.");
         }
+        System.out.println( "BYE!");
     }
 }
