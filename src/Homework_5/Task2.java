@@ -7,6 +7,8 @@ public class Task2 {
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Enter the Working Hours:");
         int hoursInput = scanner.nextInt();
+        System.out.println(" Enter rate:");
+        int rateInput = scanner.nextInt();
         System.out.println(" Enter your seniority:");
         int workingYearsInput = scanner.nextInt();
         System.out.println(" Enter how many Sales was performed this month:");
@@ -14,24 +16,24 @@ public class Task2 {
         System.out.println(" Enter total sum of sales:");
         int amountSalesBonus = scanner.nextInt();
 
-        double salary = (workedHours(hoursInput) * seniority(workingYearsInput) )+ bonus(numberSalesBonus) + salesBonus(amountSalesBonus);
+        double salary = (workedHours(hoursInput, rateInput) * seniority(workingYearsInput) )+ bonus(numberSalesBonus) + salesBonus(amountSalesBonus);
         System.out.println("Your salary is: " + salary);
 
 
     }
 
     //1
-    static double workedHours(int hours) {
-        double totalHours=hours;
+    public static double workedHours(int hours, int rate) {
+        double totalForHours=hours*rate;
         if (hours >= 160) {
             double workOver = 1.5 * (hours - 160);
-            totalHours = workOver + 160;
+            totalForHours = (160 + workOver) * rate;
         }
-        return totalHours;
+        return totalForHours;
     }
 
     //2
-    static double seniority(int workingYears) {
+    public static double seniority(int workingYears) {
         double seniorityRate = 0;
         if (workingYears < 2) {
             seniorityRate = 1;
@@ -46,7 +48,7 @@ public class Task2 {
     }
 
     //3
-    static double bonus(int salesAmount) {
+    public static double bonus(int salesAmount) {
         double bonusTotal = 0;
         if (salesAmount >= 20) {
             bonusTotal = 250;
@@ -60,7 +62,7 @@ public class Task2 {
     }
 
     //4
-    static double salesBonus(double sumOfSales) {
+    public static double salesBonus(double sumOfSales) {
         double salesBonus;
         if (sumOfSales >= 15000) {
             salesBonus = 250;
