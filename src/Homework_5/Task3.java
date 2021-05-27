@@ -24,7 +24,7 @@ public class Task3 {
 
     ////Стоимость интернета до 8гб включена в пакет, после 50 грн / 500 мб (вход
     //параметр кол-во потраченных гб)
-    static int internet(int gigabytes) {
+    public static int internet(int gigabytes) {
         int megabytes = gigabytes * 1000;
         int totalForInternet = 0;
         if (gigabytes > 8) {
@@ -39,7 +39,7 @@ public class Task3 {
     }
 
     //Звонки по Украине до 500 минут 0,5 грн / мин после 0,75
-    static double calls(int minutes) {
+    public static double calls(int minutes) {
         double totalForCalls;
         if (minutes <= 500) {
             totalForCalls = minutes * 0.5;
@@ -49,23 +49,24 @@ public class Task3 {
     }
 
     //Смс до 50 шт 1 грн после 1,50
-    static double messages(int messageAmount) {
+    public static double messages(int messageAmount) {
         double totalMessages;
         if (messageAmount <= 50) {
             totalMessages = messageAmount * 1;
-        } else
-            totalMessages = messageAmount * 1.5;
+        }
+        else
+            totalMessages = ((messageAmount - 50) * 1.5)+50;
         return totalMessages;
     }
 
     //Звонки за рубеж зона 1: 1.5 грн/мин
-    static double roamingZoneOne(int minutes) {
+    public static double roamingZoneOne(int minutes) {
         double totalRoamingZoneOne = minutes * 1.5;
         return totalRoamingZoneOne;
     }
 
     //Звонки за рубеж зона 2: 2 грн/мин
-    static double roamingZoneTwo(int minutes) {
+    public static double roamingZoneTwo(int minutes) {
         double totalRoamingZoneTwo = minutes * 2;
         return totalRoamingZoneTwo;
     }
