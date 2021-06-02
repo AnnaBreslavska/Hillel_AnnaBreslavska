@@ -1,6 +1,6 @@
 package Homework_7.Task3;
 
-public class iOSSmartphone extends Phone{
+public class iOSSmartphone extends Phone {
     private String operationSystem;
     private String charger;
     private String appStore;

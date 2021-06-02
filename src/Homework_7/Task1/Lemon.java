@@ -6,7 +6,8 @@ public class Lemon extends Fruit {
 
         System.out.println("Лимон выжымается...");
     }
-    public Lemon (){
+
+    public Lemon() {
         super(35);
     }
 

@@ -1,6 +1,6 @@
 package Homework_7.Task3;
 
-public class AndroidSmartphone extends Phone{
+public class AndroidSmartphone extends Phone {
 
     private String operationSystem;
     private String charger;
