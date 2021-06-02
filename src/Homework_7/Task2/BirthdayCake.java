@@ -9,13 +9,16 @@ public class BirthdayCake extends Cake {
     }
 
     public int getCandles() {
+
         return candles;
     }
 
     public void setCandles(int candles) {
+
         this.candles = candles;
     }
-    public void BDCake (){
+
+    public void BDCake() {
         System.out.println("BD Cake method");
     }
 
