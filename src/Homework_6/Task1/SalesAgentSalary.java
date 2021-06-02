@@ -17,6 +17,7 @@ public class SalesAgentSalary {
     public double getSalary() {
         return salary;
     }
+
     public void setSalary(double salary) {
         this.salary = salary;
     }
@@ -27,12 +28,12 @@ public class SalesAgentSalary {
         this.experience = experience;
         this.salesAmount = salesAmount;
         this.salesTotalSum = salesTotalSum;
-        setSalary((workedHours(hours, rateInHour) * seniority(experience) )+ bonus(salesAmount) + salesBonus(salesTotalSum));
+        setSalary((workedHours(hours, rateInHour) * seniority(experience)) + bonus(salesAmount) + salesBonus(salesTotalSum));
     }
 
     public SalesAgentSalary(int hours, int rateInHour) {
         this.hours = hours;
         this.rateInHour = rateInHour;
-        setSalary( workedHours(hours, rateInHour));
+        setSalary(workedHours(hours, rateInHour));
     }
 }
