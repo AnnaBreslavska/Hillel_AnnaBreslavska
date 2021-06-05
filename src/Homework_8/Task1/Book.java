@@ -1,8 +1,8 @@
 package Homework_8.Task1;
 
 public class Book {
-    private  double price;
-    private  String title;
+    private double price;
+    private String title;
     private String coverType;
     private int quantityOfPages;
 
@@ -11,45 +11,47 @@ public class Book {
         this.title = title;
         this.coverType = coverType;
         this.quantityOfPages = quantityOfPages;
-       // System.out.println(price + title + coverType + quantityOfPages);
-    }
-
-    public Book() {
-
     }
 
     public double getPrice() {
+
         return price;
     }
 
     public void setPrice(double price) {
+
         this.price = price;
     }
 
     public String getTitle() {
+
         return title;
     }
 
     public void setTitle(String title) {
+
         this.title = title;
     }
 
     public String getCoverType() {
+
         return coverType;
     }
 
     public void setCoverType(String coverType) {
+
         this.coverType = coverType;
     }
 
     public int getQuantityOfPages() {
+
         return quantityOfPages;
     }
 
     public void setQuantityOfPages(int quantityOfPages) {
+
         this.quantityOfPages = quantityOfPages;
     }
-
 
 
 }
