@@ -1,6 +1,7 @@
 package Homework_9;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Task1 {
@@ -13,13 +14,9 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Double> arrayListSize = new ArrayList<>();
         double sum = 0;
-        for (int i = 1; i < 6; i++) {
-            int currentNumber = i;
-            System.out.println(" Enter " + currentNumber + " value:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(" Enter " + (i + 1) + " value:");
             double number = scanner.nextDouble();
-            for (double n : arrayListSize) {
-                n = number;
-            }
             sum = sum + number;
             arrayListSize.add(number);
         }
@@ -28,13 +25,4 @@ public class Task1 {
 }
 
 
-//        for (double n : values) {
-//            for (int i = 1; i < values.size(); i++) {
-//                int currentNumber = i;
-//                System.out.println(" Enter " + currentNumber + " value:");
-//                double number = scanner.nextDouble();
-//                n = number;
-//                values.add(number);
-//                sum = sum + number;
-//            }
 
