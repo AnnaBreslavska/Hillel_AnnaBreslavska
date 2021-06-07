@@ -11,14 +11,22 @@ public class Task1 {
     }
 
     public static double getSum() {
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<Double> arrayListSize = new ArrayList<>();
+        ArrayList<Double> arrayListNumbers = new ArrayList<>();
         double sum = 0;
+        int currentElementIndex;
         for (int i = 0; i < 5; i++) {
+            currentElementIndex = i;
             System.out.println(" Enter " + (i + 1) + " value:");
-            double number = scanner.nextDouble();
-            sum = sum + number;
-            arrayListSize.add(number);
+            Scanner scanner = new Scanner(System.in);
+            try {
+                double number = scanner.nextDouble();
+                sum = sum + number;
+                arrayListNumbers.add(number);
+
+            } catch (InputMismatchException e) {
+                int inputError = currentElementIndex;
+                System.out.println("Only numbers can be entered!");
+            }
         }
         return sum;
     }
