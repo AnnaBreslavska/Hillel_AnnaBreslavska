@@ -6,6 +6,8 @@ public class BookTester {
     public static void main(String[] args) {
 
         ArrayList<Book> bookCollection = new ArrayList<>();
+
+
         bookCollection.add(new Book(1250, "Shantaram", "Soft", 864));
         bookCollection.add(new Book(755, "Jane Eyre", "Soft", 499));
         bookCollection.add(new Book(755, "1984", "Soft", 765));
@@ -36,4 +38,5 @@ public class BookTester {
         System.out.println("В магазине есть след. книги в твердом переплете");
         booksWithHardCover.forEach(x -> System.out.println(x.getTitle()));
     }
+
 }
