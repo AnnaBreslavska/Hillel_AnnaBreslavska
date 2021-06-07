@@ -1,6 +1,6 @@
 package Homework_9;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -11,23 +11,21 @@ public class Task1 {
     }
 
     public static double getSum() {
-        ArrayList<Double> arrayListNumbers = new ArrayList<>();
+        double[] arrayValues = new double[5];
         double sum = 0;
-        int currentElementIndex;
-        for (int i = 0; i < 5; i++) {
-            currentElementIndex = i;
-            System.out.println(" Enter " + (i + 1) + " value:");
-            Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < arrayValues.length; i++) {
             try {
+                System.out.println(" Enter " + (i + 1) + " value:");
+                Scanner scanner = new Scanner(System.in);
                 double number = scanner.nextDouble();
+                arrayValues[i] = number;
                 sum = sum + number;
-                arrayListNumbers.add(number);
-
             } catch (InputMismatchException e) {
-                int inputError = currentElementIndex;
                 System.out.println("Only numbers can be entered!");
+                i--;
             }
         }
+        System.out.println("Your array is the following ->: " + Arrays.toString(arrayValues));
         return sum;
     }
 }
