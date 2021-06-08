@@ -9,7 +9,7 @@ public class Task1 {
 
 
     public static String afterFeelInUpperCase(String inputString) {
-        String[] arrayString = inputString.split(" ");
+        String[] arrayString = inputString.split("\\s");
         String stringInUpperCase=" ";
 
         for (int i = 0; i < arrayString.length; i++) {
