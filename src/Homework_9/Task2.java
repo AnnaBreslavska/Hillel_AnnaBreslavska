@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Task2 {
     public static void main(String[] args) {
 
-        ArrayList<Book> arrayList = new ArrayList<>(5);
+        ArrayList<Book> arrayList = new ArrayList<>();
 
         arrayList.add(BookTester.bookCollection().get(0));
         arrayList.add(BookTester.bookCollection().get(1));
