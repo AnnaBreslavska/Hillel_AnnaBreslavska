@@ -3,11 +3,30 @@ package Homework_8.Task1;
 import java.util.ArrayList;
 
 public class BookTester {
+
     public static void main(String[] args) {
 
+        ArrayList<Book> booksWithSoftCover = new ArrayList<>();
+        ArrayList<Book> booksWithHardCover = new ArrayList<>();
+
+        for (int i = 0; i < bookCollection().size(); i++) {
+            if (bookCollection().get(i).getCoverType().equals("Soft")) {
+                booksWithSoftCover.add(bookCollection().get(i));
+            } else {
+                booksWithHardCover.add(bookCollection().get(i));
+            }
+        }
+
+        System.out.println("Все книги в магазине: ");
+        bookCollection().forEach(x -> System.out.println(x.getTitle()));
+        System.out.println("В магазине есть след. книги в мягком переплете: ");
+        booksWithSoftCover.forEach(x -> System.out.println(x.getTitle()));
+        System.out.println("В магазине есть след. книги в твердом переплете: ");
+        booksWithHardCover.forEach(x -> System.out.println(x.getTitle()));
+    }
+
+    public static ArrayList<Book> bookCollection() {
         ArrayList<Book> bookCollection = new ArrayList<>();
-
-
         bookCollection.add(new Book(1250, "Shantaram", "Soft", 864));
         bookCollection.add(new Book(755, "Jane Eyre", "Soft", 499));
         bookCollection.add(new Book(755, "1984", "Soft", 765));
@@ -19,24 +38,7 @@ public class BookTester {
         bookCollection.add(new Book(788, "Harry Potter and the Half-Blood Prince", "Hard", 478));
         bookCollection.add(new Book(1050, "Harry Potter and the Deathly Hallows", "Hard", 847));
 
-        ArrayList<Book> booksWithSoftCover = new ArrayList<>();
-        ArrayList<Book> booksWithHardCover = new ArrayList<>();
-
-
-        for (int i = 0; i < bookCollection.size(); i++) {
-            if (bookCollection.get(i).getCoverType().equals("Soft")) {
-                booksWithSoftCover.add(bookCollection.get(i));
-            } else {
-                booksWithHardCover.add(bookCollection.get(i));
-            }
-        }
-
-        System.out.println("Все книги в магазине: ");
-        bookCollection.forEach(x -> System.out.println(x.getTitle()));
-        System.out.println("В магазине есть след. книги в мягком переплете: ");
-        booksWithSoftCover.forEach(x -> System.out.println(x.getTitle()));
-        System.out.println("В магазине есть след. книги в твердом переплете");
-        booksWithHardCover.forEach(x -> System.out.println(x.getTitle()));
+        return bookCollection;
     }
 
 }
