@@ -7,14 +7,13 @@ public class Task2 {
     }
 
     public static String withoutFirstAndLastChar(String inputString) {
+        String stringWithoutFirstAndLastChar = "";
+        try {
+            stringWithoutFirstAndLastChar = inputString.substring(1, inputString.length() - 1);
 
-        char[] inputStringChar = inputString.toCharArray();
-        int stringEnd = inputStringChar.length -1;
-        int stringStart = inputStringChar.length - inputStringChar.length +1;
-
-
-        String stringWithoutFirstAndLastChar = inputString.substring(stringStart, stringEnd) ;
-
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.println("Input string cannot be empty!");
+        }
         return stringWithoutFirstAndLastChar;
     }
 }
