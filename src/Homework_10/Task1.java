@@ -10,13 +10,13 @@ public class Task1 {
 
     public static String afterFeelInUpperCase(String inputString) {
         String[] arrayString = inputString.split("\\s");
-        String stringInUpperCase=" ";
+        String stringInUpperCase = " ";
 
         for (int i = 0; i < arrayString.length; i++) {
             String currentWord = arrayString[i];
             if (currentWord.equals("feel")) {
                 i++;
-                stringInUpperCase=arrayString[i];
+                stringInUpperCase = arrayString[i];
             }
         }
         return stringInUpperCase.toUpperCase();
