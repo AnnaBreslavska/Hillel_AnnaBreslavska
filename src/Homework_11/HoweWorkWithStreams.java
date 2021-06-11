@@ -25,14 +25,20 @@ public class HoweWorkWithStreams {
 
         System.out.println("4. 3d minimal price from lowest to high: "+ computerPrices.stream().sorted().skip(2).findFirst().get());
 
+        Map<Integer, Computer> mapOfComputerList =computerList.stream().collect(Collectors
+                .toMap(k->k.getId(),k->k));
+        System.out.println("5. Here is Map example : " + mapOfComputerList.get(45464996));
+
+
         boolean isThereNoDOSOS=computerList.stream().noneMatch(computer -> computer.getOS().equals("DOS"));
         System.out.println("6. Is there no computer with DOS operation system? " + isThereNoDOSOS);
 
         boolean isThereMacOS = computerList.stream().anyMatch(computer -> computer.getOS().equals("MacOS"));
         System.out.println("7. is there any computer with Mac operation system? " + isThereMacOS);
 
-        Map<Integer, Computer> mapOfComputerList =computerList.stream().collect(Collectors
-                .toMap(k->k.getId(),);
+
+
+
 
 
 
