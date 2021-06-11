@@ -1,6 +1,7 @@
 package Homework_11;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -30,8 +31,8 @@ public class HoweWorkWithStreams {
         boolean isThereMacOS = computerList.stream().anyMatch(computer -> computer.getOS().equals("MacOS"));
         System.out.println("7. is there any computer with Mac operation system? " + isThereMacOS);
 
-//        Map<Integer, Computer> mapOfComputerList =computerList.stream().collect(Collectors
-//                .toMap();
+        Map<Integer, Computer> mapOfComputerList =computerList.stream().collect(Collectors
+                .toMap(k->k.getId(),);
 
 
 
